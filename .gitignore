@@ -1,0 +1,9 @@
+# secrets for the local LLM gateway — never commit
+.env
+.env.*
+!.env.example
+
+# python
+__pycache__/
+*.py[cod]
+.pytest_cache/

@@ -1,0 +1,33 @@
+# Provider tiers for server/llm_gateway.py (vendored from designreview/core/routing.yaml).
+#
+# A tier's providers are tried top-to-bottom. A provider is skipped when its API key is missing from
+# .env or it is cooling down after a recent failure. Any model below can be overridden from .env with
+# GEMINI_MODEL / GROQ_MODEL / CEREBRAS_MODEL / OPENROUTER_MODEL / ANTHROPIC_MODEL / OLLAMA_MODEL.
+
+providers:
+  - name: gemini
+    model: gemini-2.5-flash
+    rpm: 60
+  - name: groq
+    model: llama-3.3-70b-versatile
+    rpm: 30
+  - name: cerebras
+    model: llama3.1-8b
+    rpm: 30
+  - name: openrouter
+    model: meta-llama/llama-3.3-70b-instruct:free
+    rpm: 20
+  - name: anthropic
+    model: claude-opus-5
+    rpm: 50
+  - name: ollama
+    model: gemma:latest
+    rpm: 120
+
+tiers:
+  # Pattern checks from the DSA tracker: free providers first, paid Anthropic as the reliable fallback,
+  # local Ollama last.
+  verify: [gemini, groq, cerebras, openrouter, anthropic, ollama]
+  default: [gemini, groq, cerebras, anthropic, openrouter, ollama]
+  fast: [groq, cerebras, gemini, ollama]
+  quality: [anthropic, gemini, openrouter, ollama]

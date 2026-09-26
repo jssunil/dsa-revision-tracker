@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>DSA Revision Tracker</title>
-<meta name="description" content="60-day DSA sprint tracker with per-problem notes, links and handwritten-image notes, backed by a GitHub repo.">
+<meta name="description" content="Customizable DSA study plan: concepts, days, LeetCode and custom problems, pattern checks, time log, revisions and Google Calendar, backed by a GitHub repo.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
@@ -16,77 +16,77 @@
   <div class="head-inner">
     <div class="brandrow">
       <div class="brand">
-        <h1>DSA Revision Tracker</h1>
-        <p class="sub">60-day sprint · 41 patterns · Top Interview 150 · notes &amp; handwritten images</p>
+        <h1 id="brandTitle">DSA Revision Tracker</h1>
+        <div id="globalBar" class="global-bar"></div>
       </div>
       <div class="tools">
         <span id="syncState" class="sync warn">Local only</span>
         <button id="themeBtn" class="tbtn" type="button" title="Toggle theme">Theme</button>
-        <button id="exportBtn" class="tbtn" type="button" title="Download progress.json">Export</button>
-        <label class="tbtn" title="Import progress.json">Import<input id="importInput" type="file" accept="application/json" hidden></label>
-        <button id="settingsBtn" class="tbtn primary" type="button">Settings</button>
       </div>
     </div>
+
+    <nav id="nav" class="nav" aria-label="Sections">
+      <a href="#day" data-v="day">Day</a>
+      <a href="#plan" data-v="plan">Plan</a>
+      <a href="#concepts" data-v="concepts">Concepts</a>
+      <a href="#revisions" data-v="revisions">Revisions <span id="revBadge" class="nav-badge" hidden></span></a>
+      <a href="#progress" data-v="progress">Progress</a>
+      <a href="#settings" data-v="settings">Settings</a>
+    </nav>
 
     <div id="banner" class="banner" hidden>
       <span>Running in <b>local-only</b> mode — changes stay in this browser. Connect a GitHub repo to sync across devices and make the repo your source of truth.</span>
       <button id="bannerConnect" class="linkbtn" type="button">Connect GitHub →</button>
     </div>
+    <div id="migrateBanner" class="banner warnb" hidden>
+      <span>This repo uses the old data format. <b>Upgrade</b> creates <code>data/plan.json</code>, moves concept notes to <code>concepts/&lt;concept&gt;.md</code>, adds <code>schedule.md</code> and suggests revisions from what you've solved — in one commit. Saving is paused until then.</span>
+      <button id="migrateBtn" class="tbtn primary" type="button">Upgrade now</button>
+    </div>
 
-    <div id="stats" class="stats"></div>
-
-    <div class="controls">
-      <label class="search">
-        <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
-        <input id="search" type="search" placeholder="Search problems and your notes…" autocomplete="off">
-      </label>
-      <div id="filters" class="filters" role="group" aria-label="Filter">
-        <button class="fbtn" data-f="all" aria-pressed="true" type="button">All</button>
-        <button class="fbtn" data-f="todo" aria-pressed="false" type="button">To do</button>
-        <button class="fbtn" data-f="solved" aria-pressed="false" type="button">Solved</button>
-        <button class="fbtn" data-f="review" aria-pressed="false" type="button">Review</button>
-        <button class="fbtn" data-f="withnotes" aria-pressed="false" type="button">Has notes</button>
+    <div id="dayTools" class="daytools">
+      <div id="stats" class="stats"></div>
+      <div class="controls">
+        <div class="daynav" role="group" aria-label="Choose day">
+          <button id="prevDay" class="navbtn" type="button" title="Previous day (←)" aria-label="Previous day">‹</button>
+          <select id="daySelect" aria-label="Day"></select>
+          <button id="nextDay" class="navbtn" type="button" title="Next day (→)" aria-label="Next day">›</button>
+          <button id="runningPill" class="runpill" type="button" title="Timer running — go to that day" hidden></button>
+        </div>
+        <label class="search">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+          <input id="search" type="search" placeholder="Search all days: problems and notes…" autocomplete="off">
+        </label>
+        <div id="filters" class="filters" role="group" aria-label="Filter">
+          <button class="fbtn" data-f="all" aria-pressed="true" type="button">All</button>
+          <button class="fbtn" data-f="todo" aria-pressed="false" type="button">To do</button>
+          <button class="fbtn" data-f="solved" aria-pressed="false" type="button">Solved</button>
+          <button class="fbtn" data-f="review" aria-pressed="false" type="button">Review</button>
+          <button class="fbtn" data-f="withnotes" aria-pressed="false" type="button">Has notes</button>
+        </div>
       </div>
     </div>
   </div>
 </header>
 
 <main class="wrap">
-  <div id="plan"></div>
+  <div id="view"></div>
   <footer class="foot">
-    Source of truth: <code>data/progress.json</code> in your GitHub repo · reference plan in <code>catalog.js</code> · images in <code>notes-images/</code>.
+    Plan: <code>data/plan.json</code> · progress: <code>data/progress.json</code> · settings: <code>data/settings.enc.json</code> (encrypted) ·
+    solutions &amp; notes: <code>problems/&lt;id&gt;/</code> · concept pages: <code>concepts/</code> · <code>schedule.md</code>
   </footer>
 </main>
 
-<dialog id="settings" class="settings">
-  <form method="dialog">
-    <div class="dlg-head"><h2>Connect GitHub</h2><button id="closeSettings" class="x" type="button" aria-label="Close">×</button></div>
-    <p class="dlg-lead">The app reads and writes <code>data/progress.json</code> and <code>notes-images/</code> in your repo through the GitHub API. Your token is stored only in this browser.</p>
-
-    <label class="field"><span>Owner (your GitHub username)</span><input id="cfgOwner" type="text" placeholder="e.g. sunil-j" autocomplete="off"></label>
-    <label class="field"><span>Repository name</span><input id="cfgRepo" type="text" placeholder="e.g. dsa-revision" autocomplete="off"></label>
-    <label class="field"><span>Branch</span><input id="cfgBranch" type="text" value="main" autocomplete="off"></label>
-    <label class="field"><span>Fine-grained token (Contents: Read &amp; write on this repo)</span><input id="cfgToken" type="password" placeholder="github_pat_…" autocomplete="off"></label>
-
-    <details class="help">
-      <summary>How to create the token (60 seconds)</summary>
-      <ol>
-        <li>GitHub → <b>Settings</b> → <b>Developer settings</b> → <b>Personal access tokens</b> → <b>Fine-grained tokens</b> → <b>Generate new token</b>.</li>
-        <li><b>Repository access</b> → Only select repositories → pick this repo.</li>
-        <li><b>Permissions</b> → Repository permissions → <b>Contents</b> → <b>Read and write</b>.</li>
-        <li>Generate, copy the <code>github_pat_…</code> value, paste it above.</li>
-      </ol>
-      <p class="warn-note">The token lives in this browser's localStorage only. It is per-device — add it again on your phone/laptop. Use “Clear token” before handing this browser to someone else. Keep the repo <b>public</b> so GitHub Pages serves it and note-images load.</p>
-    </details>
-
-    <div class="dlg-actions">
-      <button id="clearToken" class="tbtn" type="button">Clear token</button>
-      <button id="saveSettings" class="tbtn primary" type="button">Save &amp; connect</button>
-    </div>
-  </form>
-</dialog>
-
+<!-- markdown preview: parser, sanitizer, code highlighting (the app falls back to plain text without them) -->
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<!-- shared logic (also used by Node: scripts/, tests/) -->
 <script src="catalog.js"></script>
-<script src="app.js"></script>
+<script src="lib/planlib.js"></script>
+<script src="lib/mdgen.js"></script>
+<script src="lib/srs.js"></script>
+<script src="lib/migrate.js"></script>
+<script src="lib/crypto.js"></script>
+<script type="module" src="js/main.js"></script>
 </body>
 </html>

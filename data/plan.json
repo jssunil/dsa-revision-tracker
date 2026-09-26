@@ -1,0 +1,3679 @@
+{
+  "schemaVersion": 2,
+  "meta": {
+    "title": "DSA Revision Tracker",
+    "subtitle": "60-day sprint · 41 patterns · LeetCode Top Interview 150",
+    "startDate": null,
+    "timeZone": null
+  },
+  "phases": [
+    {
+      "id": "p1",
+      "title": "Foundations I — Arrays, Pointers, Windows, Search"
+    },
+    {
+      "id": "p2",
+      "title": "Foundations II — Graphs, Trees, Structures"
+    },
+    {
+      "id": "p3",
+      "title": "Dynamic Programming"
+    },
+    {
+      "id": "p4",
+      "title": "Foundations III — Remaining + Capstone"
+    },
+    {
+      "id": "p5",
+      "title": "Advanced Systems Patterns"
+    },
+    {
+      "id": "p6",
+      "title": "AI-Infrastructure Patterns"
+    },
+    {
+      "id": "p7",
+      "title": "Interview Simulation"
+    },
+    {
+      "id": "p8",
+      "title": "Buffer & Final Polish"
+    }
+  ],
+  "concepts": {
+    "two-pointers-converging": {
+      "id": "two-pointers-converging",
+      "name": "Two Pointers (Converging)",
+      "summary": "Opposite ends walk inward over sorted input.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "fast-and-slow-pointers-floyd-s": {
+      "id": "fast-and-slow-pointers-floyd-s",
+      "name": "Fast & Slow Pointers (Floyd's)",
+      "summary": "Cycle detection, gap technique, middle node.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "sliding-window-fixed": {
+      "id": "sliding-window-fixed",
+      "name": "Sliding Window (Fixed)",
+      "summary": "Constant-width window, O(1) in/out update.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "sliding-window-dynamic": {
+      "id": "sliding-window-dynamic",
+      "name": "Sliding Window (Dynamic)",
+      "summary": "Grow right, shrink left to keep an invariant.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "prefix-sums": {
+      "id": "prefix-sums",
+      "name": "Prefix Sums",
+      "summary": "Cumulative totals; hashmap-of-prefixes trick.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "monotonic-stack": {
+      "id": "monotonic-stack",
+      "name": "Monotonic Stack",
+      "summary": "Next greater/smaller in one pass; stack-of-indices.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "monotonic-deque": {
+      "id": "monotonic-deque",
+      "name": "Monotonic Deque",
+      "summary": "Window extreme at the front of a decreasing deque.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "binary-search-bisection": {
+      "id": "binary-search-bisection",
+      "name": "Binary Search (Bisection)",
+      "summary": "Halve a sorted range; get the lo/hi invariant right once.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "binary-search-on-answer-space": {
+      "id": "binary-search-on-answer-space",
+      "name": "Binary Search on Answer Space",
+      "summary": "Binary-search the value via a monotone feasibility test.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "min-max-heap-top-k": {
+      "id": "min-max-heap-top-k",
+      "name": "Min/Max Heap (Top-K)",
+      "summary": "Size-K heap over a stream; evict the weakest.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "two-heaps": {
+      "id": "two-heaps",
+      "name": "Two Heaps",
+      "summary": "Balanced max-heap + min-heap expose the median.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "k-way-merge": {
+      "id": "k-way-merge",
+      "name": "K-Way Merge",
+      "summary": "Heap of stream fronts emits the global minimum.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "interval-sweep-line": {
+      "id": "interval-sweep-line",
+      "name": "Interval Sweep-Line",
+      "summary": "Sort by boundary; sweep, tracking overlaps.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "matrix-grid-traversal-bfs-dfs": {
+      "id": "matrix-grid-traversal-bfs-dfs",
+      "name": "Matrix / Grid Traversal (BFS/DFS)",
+      "summary": "Treat the grid/graph as nodes; flood with BFS or DFS.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "topological-sort-kahn-s": {
+      "id": "topological-sort-kahn-s",
+      "name": "Topological Sort (Kahn's)",
+      "summary": "Emit zero-in-degree nodes; detect the cycle case.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "union-find-dsu": {
+      "id": "union-find-dsu",
+      "name": "Union-Find (DSU)",
+      "summary": "Path compression + union by rank; near-O(1) connectivity.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "trie-prefix-tree": {
+      "id": "trie-prefix-tree",
+      "name": "Trie (Prefix Tree)",
+      "summary": "Character-keyed tree; O(L) prefix lookup.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "backtracking-with-pruning": {
+      "id": "backtracking-with-pruning",
+      "name": "Backtracking with Pruning",
+      "summary": "DFS build; abandon a branch on constraint violation.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "1-d-dynamic-programming": {
+      "id": "1-d-dynamic-programming",
+      "name": "1-D Dynamic Programming",
+      "summary": "Rolling variables; Kadane family.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "2-d-dynamic-programming": {
+      "id": "2-d-dynamic-programming",
+      "name": "2-D Dynamic Programming",
+      "summary": "Grid/table tabulation.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "0-1-knapsack-and-bounded-state": {
+      "id": "0-1-knapsack-and-bounded-state",
+      "name": "0/1 Knapsack & Bounded State",
+      "summary": "Subset selection under capacity; coin/word variants.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "lcs-edit-distance": {
+      "id": "lcs-edit-distance",
+      "name": "LCS / Edit Distance",
+      "summary": "Two-string alignment; match vs transform.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "state-machine-dp": {
+      "id": "state-machine-dp",
+      "name": "State Machine DP",
+      "summary": "Named states + transitions; the stock-trading family.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "greedy-exchange-arguments": {
+      "id": "greedy-exchange-arguments",
+      "name": "Greedy Exchange Arguments",
+      "summary": "Locally optimal, justified by an exchange argument.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "bit-manipulation-and-bitmasks": {
+      "id": "bit-manipulation-and-bitmasks",
+      "name": "Bit Manipulation & Bitmasks",
+      "summary": "XOR cancellation, masks, bit tricks.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "cyclic-sort-in-place-matrix": {
+      "id": "cyclic-sort-in-place-matrix",
+      "name": "Cyclic Sort + In-place Matrix",
+      "summary": "Index-placement in-place; same idea powers matrix mechanics.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "linked-list-inversion": {
+      "id": "linked-list-inversion",
+      "name": "Linked List Inversion",
+      "summary": "Re-thread pointers in one pass with a sentinel.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "binary-tree-divide-and-conquer": {
+      "id": "binary-tree-divide-and-conquer",
+      "name": "Binary Tree Divide & Conquer",
+      "summary": "Recurse, combine child summaries, update a global.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "tree-bfs-dijkstra-s": {
+      "id": "tree-bfs-dijkstra-s",
+      "name": "Tree BFS + Dijkstra's",
+      "summary": "Level-order queue walks; Dijkstra is the weighted cousin.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "foundational-capstone": {
+      "id": "foundational-capstone",
+      "name": "Foundational Capstone",
+      "summary": "90-min mixed mock (2 problems). Review all 30 trigger notes. Foundations done.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "segment-tree-with-lazy-propagation": {
+      "id": "segment-tree-with-lazy-propagation",
+      "name": "Segment Tree with Lazy Propagation",
+      "summary": "Range query + range update; write the template twice.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "bitwise-xor-trie": {
+      "id": "bitwise-xor-trie",
+      "name": "Bitwise XOR Trie",
+      "summary": "Numbers as bit paths; greedy opposite-bit walk.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "bellman-ford-and-bounded-hops": {
+      "id": "bellman-ford-and-bounded-hops",
+      "name": "Bellman-Ford & Bounded Hops",
+      "summary": "Relax edges K+1 times over a snapshot.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "tarjan-s-scc-bridges": {
+      "id": "tarjan-s-scc-bridges",
+      "name": "Tarjan's SCC / Bridges",
+      "summary": "Discovery time + low-link in one DFS.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "thread-safe-lru-lfu-cache": {
+      "id": "thread-safe-lru-lfu-cache",
+      "name": "Thread-Safe LRU / LFU Cache",
+      "summary": "Hash map + doubly-linked list; add and reason about the lock.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "token-bucket-leaky-bucket": {
+      "id": "token-bucket-leaky-bucket",
+      "name": "Token Bucket / Leaky Bucket",
+      "summary": "Timestamp math; burst behaviour under a QPS cap.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "count-min-sketch": {
+      "id": "count-min-sketch",
+      "name": "Count-Min Sketch",
+      "summary": "Hash rows; min across rows estimates frequency.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "hyperloglog-cardinality": {
+      "id": "hyperloglog-cardinality",
+      "name": "HyperLogLog Cardinality",
+      "summary": "Registers of leading-zero runs; harmonic mean.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "hnsw-vector-graph-indexing": {
+      "id": "hnsw-vector-graph-indexing",
+      "name": "HNSW Vector Graph Indexing",
+      "summary": "Layered greedy descent + base-layer beam search.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "speculative-decoding-verification": {
+      "id": "speculative-decoding-verification",
+      "name": "Speculative Decoding Verification",
+      "summary": "Draft proposes, target verifies; accept a matching prefix.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    },
+    "continuous-batching-scheduler": {
+      "id": "continuous-batching-scheduler",
+      "name": "Continuous Batching Scheduler",
+      "summary": "Admit/evict sequences under a KV-cache budget. All 41 done.",
+      "triggers": [],
+      "leetcodeTags": [],
+      "source": "builtin",
+      "createdAt": null
+    }
+  },
+  "days": [
+    {
+      "id": "1",
+      "phaseId": "p1",
+      "kind": "new",
+      "title": "Two Pointers (Converging)",
+      "conceptIds": [
+        "two-pointers-converging"
+      ],
+      "problemIds": [
+        "two-sum-ii-input-array-is-sorted",
+        "container-with-most-water",
+        "3sum",
+        "valid-palindrome",
+        "is-subsequence",
+        "merge-sorted-array",
+        "remove-duplicates-from-sorted-array-ii"
+      ],
+      "focus": "Opposite ends walk inward over sorted input.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "2",
+      "phaseId": "p1",
+      "kind": "new",
+      "title": "Fast & Slow Pointers (Floyd's)",
+      "conceptIds": [
+        "fast-and-slow-pointers-floyd-s"
+      ],
+      "problemIds": [
+        "linked-list-cycle",
+        "happy-number",
+        "remove-nth-node-from-end-of-list",
+        "add-two-numbers",
+        "copy-list-with-random-pointer"
+      ],
+      "focus": "Cycle detection, gap technique, middle node.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "3",
+      "phaseId": "p1",
+      "kind": "new",
+      "title": "Sliding Window (Fixed)",
+      "conceptIds": [
+        "sliding-window-fixed"
+      ],
+      "problemIds": [
+        "substring-with-concatenation-of-all-words"
+      ],
+      "focus": "Constant-width window, O(1) in/out update.",
+      "note": "Fixed-window is thin in Top 150 — add a couple from NeetCode.",
+      "plannedDate": null
+    },
+    {
+      "id": "4",
+      "phaseId": "p1",
+      "kind": "new",
+      "title": "Sliding Window (Dynamic)",
+      "conceptIds": [
+        "sliding-window-dynamic"
+      ],
+      "problemIds": [
+        "longest-substring-without-repeating-characters",
+        "minimum-size-subarray-sum",
+        "minimum-window-substring",
+        "contains-duplicate-ii"
+      ],
+      "focus": "Grow right, shrink left to keep an invariant.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "5",
+      "phaseId": "p1",
+      "kind": "new",
+      "title": "Prefix Sums",
+      "conceptIds": [
+        "prefix-sums"
+      ],
+      "problemIds": [
+        "product-of-array-except-self"
+      ],
+      "focus": "Cumulative totals; hashmap-of-prefixes trick.",
+      "note": "Pure prefix-sum problems are scarce in Top 150; the technique recurs inside later problems.",
+      "plannedDate": null
+    },
+    {
+      "id": "6",
+      "phaseId": "p1",
+      "kind": "new",
+      "title": "Monotonic Stack",
+      "conceptIds": [
+        "monotonic-stack"
+      ],
+      "problemIds": [
+        "valid-parentheses",
+        "min-stack",
+        "evaluate-reverse-polish-notation",
+        "simplify-path",
+        "basic-calculator",
+        "trapping-rain-water"
+      ],
+      "focus": "Next greater/smaller in one pass; stack-of-indices.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "7",
+      "phaseId": "p1",
+      "kind": "rev",
+      "title": "Revision — Week 1",
+      "conceptIds": [],
+      "problemIds": [],
+      "focus": "Recall all 6 templates cold. Timed 2-problem set (45 min).",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "8",
+      "phaseId": "p1",
+      "kind": "new",
+      "title": "Monotonic Deque",
+      "conceptIds": [
+        "monotonic-deque"
+      ],
+      "problemIds": [],
+      "focus": "Window extreme at the front of a decreasing deque.",
+      "note": "Not in Top 150 — do Sliding Window Maximum + Shortest Subarray with Sum ≥ K from NeetCode.",
+      "plannedDate": null
+    },
+    {
+      "id": "9",
+      "phaseId": "p1",
+      "kind": "new",
+      "title": "Binary Search (Bisection)",
+      "conceptIds": [
+        "binary-search-bisection"
+      ],
+      "problemIds": [
+        "search-insert-position",
+        "search-a-2d-matrix",
+        "find-peak-element",
+        "search-in-rotated-sorted-array",
+        "find-first-and-last-position-of-element-in-sorted-array",
+        "find-minimum-in-rotated-sorted-array"
+      ],
+      "focus": "Halve a sorted range; get the lo/hi invariant right once.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "10",
+      "phaseId": "p1",
+      "kind": "new",
+      "title": "Binary Search on Answer Space",
+      "conceptIds": [
+        "binary-search-on-answer-space"
+      ],
+      "problemIds": [
+        "sqrtx",
+        "median-of-two-sorted-arrays"
+      ],
+      "focus": "Binary-search the value via a monotone feasibility test.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "11",
+      "phaseId": "p1",
+      "kind": "new",
+      "title": "Min/Max Heap (Top-K)",
+      "conceptIds": [
+        "min-max-heap-top-k"
+      ],
+      "problemIds": [
+        "kth-largest-element-in-an-array",
+        "ipo",
+        "find-k-pairs-with-smallest-sums"
+      ],
+      "focus": "Size-K heap over a stream; evict the weakest.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "12",
+      "phaseId": "p1",
+      "kind": "new",
+      "title": "Two Heaps",
+      "conceptIds": [
+        "two-heaps"
+      ],
+      "problemIds": [
+        "find-median-from-data-stream"
+      ],
+      "focus": "Balanced max-heap + min-heap expose the median.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "13",
+      "phaseId": "p1",
+      "kind": "new",
+      "title": "K-Way Merge",
+      "conceptIds": [
+        "k-way-merge"
+      ],
+      "problemIds": [
+        "merge-two-sorted-lists",
+        "merge-k-sorted-lists"
+      ],
+      "focus": "Heap of stream fronts emits the global minimum.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "14",
+      "phaseId": "p1",
+      "kind": "rev",
+      "title": "Revision — Weeks 1–2",
+      "conceptIds": [],
+      "problemIds": [],
+      "focus": "Mixed recall (12 patterns). One timed 2-problem mock, talk aloud.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "15",
+      "phaseId": "p2",
+      "kind": "new",
+      "title": "Interval Sweep-Line",
+      "conceptIds": [
+        "interval-sweep-line"
+      ],
+      "problemIds": [
+        "summary-ranges",
+        "merge-intervals",
+        "insert-interval",
+        "minimum-number-of-arrows-to-burst-balloons"
+      ],
+      "focus": "Sort by boundary; sweep, tracking overlaps.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "16",
+      "phaseId": "p2",
+      "kind": "new",
+      "title": "Matrix / Grid Traversal (BFS/DFS)",
+      "conceptIds": [
+        "matrix-grid-traversal-bfs-dfs"
+      ],
+      "problemIds": [
+        "number-of-islands",
+        "surrounded-regions",
+        "clone-graph",
+        "evaluate-division",
+        "snakes-and-ladders",
+        "minimum-genetic-mutation",
+        "word-ladder"
+      ],
+      "focus": "Treat the grid/graph as nodes; flood with BFS or DFS.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "17",
+      "phaseId": "p2",
+      "kind": "new",
+      "title": "Topological Sort (Kahn's)",
+      "conceptIds": [
+        "topological-sort-kahn-s"
+      ],
+      "problemIds": [
+        "course-schedule",
+        "course-schedule-ii"
+      ],
+      "focus": "Emit zero-in-degree nodes; detect the cycle case.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "18",
+      "phaseId": "p2",
+      "kind": "new",
+      "title": "Union-Find (DSU)",
+      "conceptIds": [
+        "union-find-dsu"
+      ],
+      "problemIds": [
+        "longest-consecutive-sequence"
+      ],
+      "focus": "Path compression + union by rank; near-O(1) connectivity.",
+      "note": "DSU is thin in Top 150 — add Redundant Connection + Number of Provinces.",
+      "plannedDate": null
+    },
+    {
+      "id": "19",
+      "phaseId": "p2",
+      "kind": "new",
+      "title": "Trie (Prefix Tree)",
+      "conceptIds": [
+        "trie-prefix-tree"
+      ],
+      "problemIds": [
+        "implement-trie-prefix-tree",
+        "design-add-and-search-words-data-structure",
+        "word-search-ii",
+        "longest-common-prefix"
+      ],
+      "focus": "Character-keyed tree; O(L) prefix lookup.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "20",
+      "phaseId": "p2",
+      "kind": "new",
+      "title": "Backtracking with Pruning",
+      "conceptIds": [
+        "backtracking-with-pruning"
+      ],
+      "problemIds": [
+        "letter-combinations-of-a-phone-number",
+        "combinations",
+        "permutations",
+        "combination-sum",
+        "n-queens-ii",
+        "generate-parentheses",
+        "word-search"
+      ],
+      "focus": "DFS build; abandon a branch on constraint violation.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "21",
+      "phaseId": "p2",
+      "kind": "rev",
+      "title": "Revision — Week 3 (tree hard set)",
+      "conceptIds": [],
+      "problemIds": [
+        "binary-tree-maximum-path-sum",
+        "lowest-common-ancestor-of-a-binary-tree",
+        "construct-binary-tree-from-preorder-and-inorder-traversal",
+        "construct-binary-tree-from-inorder-and-postorder-traversal"
+      ],
+      "focus": "Graph + backtracking recall; then the tree D&C hards.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "22",
+      "phaseId": "p3",
+      "kind": "new",
+      "title": "1-D Dynamic Programming",
+      "conceptIds": [
+        "1-d-dynamic-programming"
+      ],
+      "problemIds": [
+        "climbing-stairs",
+        "house-robber",
+        "maximum-subarray",
+        "maximum-sum-circular-subarray",
+        "best-time-to-buy-and-sell-stock",
+        "longest-increasing-subsequence"
+      ],
+      "focus": "Rolling variables; Kadane family.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "23",
+      "phaseId": "p3",
+      "kind": "new",
+      "title": "2-D Dynamic Programming",
+      "conceptIds": [
+        "2-d-dynamic-programming"
+      ],
+      "problemIds": [
+        "triangle",
+        "minimum-path-sum",
+        "unique-paths-ii",
+        "maximal-square"
+      ],
+      "focus": "Grid/table tabulation.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "24",
+      "phaseId": "p3",
+      "kind": "new",
+      "title": "0/1 Knapsack & Bounded State",
+      "conceptIds": [
+        "0-1-knapsack-and-bounded-state"
+      ],
+      "problemIds": [
+        "coin-change",
+        "word-break"
+      ],
+      "focus": "Subset selection under capacity; coin/word variants.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "25",
+      "phaseId": "p3",
+      "kind": "new",
+      "title": "LCS / Edit Distance",
+      "conceptIds": [
+        "lcs-edit-distance"
+      ],
+      "problemIds": [
+        "edit-distance",
+        "longest-palindromic-substring",
+        "interleaving-string"
+      ],
+      "focus": "Two-string alignment; match vs transform.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "26",
+      "phaseId": "p3",
+      "kind": "new",
+      "title": "State Machine DP",
+      "conceptIds": [
+        "state-machine-dp"
+      ],
+      "problemIds": [
+        "best-time-to-buy-and-sell-stock-iii",
+        "best-time-to-buy-and-sell-stock-iv"
+      ],
+      "focus": "Named states + transitions; the stock-trading family.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "27",
+      "phaseId": "p3",
+      "kind": "rev",
+      "title": "Consolidation — DP only",
+      "conceptIds": [],
+      "problemIds": [],
+      "focus": "Re-solve 4 mixed DP problems from Days 22–26, notes closed. DP is where most seniors leak points.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "28",
+      "phaseId": "p3",
+      "kind": "rev",
+      "title": "Revision — Weeks 3–4 (D&C + BST)",
+      "conceptIds": [],
+      "problemIds": [
+        "convert-sorted-array-to-binary-search-tree",
+        "sort-list",
+        "construct-quad-tree",
+        "powx-n",
+        "validate-binary-search-tree",
+        "kth-smallest-element-in-a-bst",
+        "minimum-absolute-difference-in-bst",
+        "binary-search-tree-iterator"
+      ],
+      "focus": "One full narrated 45-min problem, then clear the D&C / BST set.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "29",
+      "phaseId": "p4",
+      "kind": "new",
+      "title": "Greedy Exchange Arguments",
+      "conceptIds": [
+        "greedy-exchange-arguments"
+      ],
+      "problemIds": [
+        "best-time-to-buy-and-sell-stock-ii",
+        "jump-game",
+        "jump-game-ii",
+        "gas-station",
+        "candy",
+        "h-index"
+      ],
+      "focus": "Locally optimal, justified by an exchange argument.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "30",
+      "phaseId": "p4",
+      "kind": "new",
+      "title": "Bit Manipulation & Bitmasks",
+      "conceptIds": [
+        "bit-manipulation-and-bitmasks"
+      ],
+      "problemIds": [
+        "single-number",
+        "single-number-ii",
+        "number-of-1-bits",
+        "reverse-bits",
+        "add-binary",
+        "bitwise-and-of-numbers-range",
+        "majority-element"
+      ],
+      "focus": "XOR cancellation, masks, bit tricks.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "31",
+      "phaseId": "p4",
+      "kind": "new",
+      "title": "Cyclic Sort + In-place Matrix",
+      "conceptIds": [
+        "cyclic-sort-in-place-matrix"
+      ],
+      "problemIds": [
+        "set-matrix-zeroes",
+        "spiral-matrix",
+        "rotate-image",
+        "game-of-life",
+        "valid-sudoku"
+      ],
+      "focus": "Index-placement in-place; same idea powers matrix mechanics.",
+      "note": "Cyclic Sort proper (Missing Number, First Missing Positive) isn't in Top 150 — add those two.",
+      "plannedDate": null
+    },
+    {
+      "id": "32",
+      "phaseId": "p4",
+      "kind": "new",
+      "title": "Linked List Inversion",
+      "conceptIds": [
+        "linked-list-inversion"
+      ],
+      "problemIds": [
+        "reverse-linked-list-ii",
+        "reverse-nodes-in-k-group",
+        "partition-list",
+        "rotate-list",
+        "remove-duplicates-from-sorted-list-ii"
+      ],
+      "focus": "Re-thread pointers in one pass with a sentinel.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "33",
+      "phaseId": "p4",
+      "kind": "new",
+      "title": "Binary Tree Divide & Conquer",
+      "conceptIds": [
+        "binary-tree-divide-and-conquer"
+      ],
+      "problemIds": [
+        "maximum-depth-of-binary-tree",
+        "invert-binary-tree",
+        "symmetric-tree",
+        "same-tree",
+        "path-sum",
+        "sum-root-to-leaf-numbers",
+        "count-complete-tree-nodes",
+        "flatten-binary-tree-to-linked-list"
+      ],
+      "focus": "Recurse, combine child summaries, update a global.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "34",
+      "phaseId": "p4",
+      "kind": "new",
+      "title": "Tree BFS + Dijkstra's",
+      "conceptIds": [
+        "tree-bfs-dijkstra-s"
+      ],
+      "problemIds": [
+        "binary-tree-level-order-traversal",
+        "binary-tree-zigzag-level-order-traversal",
+        "binary-tree-right-side-view",
+        "average-of-levels-in-binary-tree",
+        "populating-next-right-pointers-in-each-node-ii"
+      ],
+      "focus": "Level-order queue walks; Dijkstra is the weighted cousin.",
+      "note": "Dijkstra isn't in Top 150 — do Network Delay Time + Path with Maximum Probability.",
+      "plannedDate": null
+    },
+    {
+      "id": "35",
+      "phaseId": "p4",
+      "kind": "cap",
+      "title": "Foundational Capstone",
+      "conceptIds": [
+        "foundational-capstone"
+      ],
+      "problemIds": [],
+      "focus": "90-min mixed mock (2 problems). Review all 30 trigger notes. Foundations done.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "36",
+      "phaseId": "p5",
+      "kind": "new",
+      "title": "Segment Tree with Lazy Propagation",
+      "conceptIds": [
+        "segment-tree-with-lazy-propagation"
+      ],
+      "problemIds": [],
+      "focus": "Range query + range update; write the template twice.",
+      "note": "Beyond Top 150 — Atlas template + Range Sum Query Mutable, then a lazy-prop range-add problem.",
+      "plannedDate": null
+    },
+    {
+      "id": "37",
+      "phaseId": "p5",
+      "kind": "new",
+      "title": "Bitwise XOR Trie",
+      "conceptIds": [
+        "bitwise-xor-trie"
+      ],
+      "problemIds": [],
+      "focus": "Numbers as bit paths; greedy opposite-bit walk.",
+      "note": "Beyond Top 150 — do Maximum XOR of Two Numbers in an Array.",
+      "plannedDate": null
+    },
+    {
+      "id": "38",
+      "phaseId": "p5",
+      "kind": "new",
+      "title": "Bellman-Ford & Bounded Hops",
+      "conceptIds": [
+        "bellman-ford-and-bounded-hops"
+      ],
+      "problemIds": [],
+      "focus": "Relax edges K+1 times over a snapshot.",
+      "note": "Beyond Top 150 — do Cheapest Flights Within K Stops.",
+      "plannedDate": null
+    },
+    {
+      "id": "39",
+      "phaseId": "p5",
+      "kind": "new",
+      "title": "Tarjan's SCC / Bridges",
+      "conceptIds": [
+        "tarjan-s-scc-bridges"
+      ],
+      "problemIds": [],
+      "focus": "Discovery time + low-link in one DFS.",
+      "note": "Beyond Top 150 — do Critical Connections in a Network.",
+      "plannedDate": null
+    },
+    {
+      "id": "40",
+      "phaseId": "p5",
+      "kind": "new",
+      "title": "Thread-Safe LRU / LFU Cache",
+      "conceptIds": [
+        "thread-safe-lru-lfu-cache"
+      ],
+      "problemIds": [
+        "lru-cache",
+        "insert-delete-getrandom-o1"
+      ],
+      "focus": "Hash map + doubly-linked list; add and reason about the lock.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "41",
+      "phaseId": "p5",
+      "kind": "new",
+      "title": "Token Bucket / Leaky Bucket",
+      "conceptIds": [
+        "token-bucket-leaky-bucket"
+      ],
+      "problemIds": [],
+      "focus": "Timestamp math; burst behaviour under a QPS cap.",
+      "note": "Beyond Top 150 — Design Hit Counter / Logger Rate Limiter, then reason about concurrency.",
+      "plannedDate": null
+    },
+    {
+      "id": "42",
+      "phaseId": "p5",
+      "kind": "rev",
+      "title": "Revision — Advanced hardest",
+      "conceptIds": [],
+      "problemIds": [],
+      "focus": "Re-implement Segment Tree + Tarjan from scratch, no notes.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "43",
+      "phaseId": "p6",
+      "kind": "new",
+      "title": "Count-Min Sketch",
+      "conceptIds": [
+        "count-min-sketch"
+      ],
+      "problemIds": [],
+      "focus": "Hash rows; min across rows estimates frequency.",
+      "note": "Not a LeetCode problem — implement from the Atlas; test on a token stream.",
+      "plannedDate": null
+    },
+    {
+      "id": "44",
+      "phaseId": "p6",
+      "kind": "new",
+      "title": "HyperLogLog Cardinality",
+      "conceptIds": [
+        "hyperloglog-cardinality"
+      ],
+      "problemIds": [],
+      "focus": "Registers of leading-zero runs; harmonic mean.",
+      "note": "Not a LeetCode problem — implement and validate against an exact set count.",
+      "plannedDate": null
+    },
+    {
+      "id": "45",
+      "phaseId": "p6",
+      "kind": "new",
+      "title": "HNSW Vector Graph Indexing",
+      "conceptIds": [
+        "hnsw-vector-graph-indexing"
+      ],
+      "problemIds": [],
+      "focus": "Layered greedy descent + base-layer beam search.",
+      "note": "Not a LeetCode problem — study the paper/diagram; sketch build + search.",
+      "plannedDate": null
+    },
+    {
+      "id": "46",
+      "phaseId": "p6",
+      "kind": "new",
+      "title": "Speculative Decoding Verification",
+      "conceptIds": [
+        "speculative-decoding-verification"
+      ],
+      "problemIds": [],
+      "focus": "Draft proposes, target verifies; accept a matching prefix.",
+      "note": "Not a LeetCode problem — understand why accept/reject preserves the target distribution.",
+      "plannedDate": null
+    },
+    {
+      "id": "47",
+      "phaseId": "p6",
+      "kind": "new",
+      "title": "Continuous Batching Scheduler",
+      "conceptIds": [
+        "continuous-batching-scheduler"
+      ],
+      "problemIds": [],
+      "focus": "Admit/evict sequences under a KV-cache budget. All 41 done.",
+      "note": "Not a LeetCode problem — sketch the vLLM-style scheduler loop.",
+      "plannedDate": null
+    },
+    {
+      "id": "48",
+      "phaseId": "p6",
+      "kind": "rev",
+      "title": "Consolidation — AI-infra",
+      "conceptIds": [],
+      "problemIds": [],
+      "focus": "Whiteboard-explain each of the 5 aloud as a design-round drill.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "49",
+      "phaseId": "p6",
+      "kind": "rev",
+      "title": "Revision — all 11 advanced",
+      "conceptIds": [],
+      "problemIds": [],
+      "focus": "Recall every advanced trigger note; re-solve your 3 weakest.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "50",
+      "phaseId": "p7",
+      "kind": "mock",
+      "title": "Recognition set",
+      "conceptIds": [],
+      "problemIds": [],
+      "focus": "3 mediums, ~28 min each. Name the pattern before writing any code.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "51",
+      "phaseId": "p7",
+      "kind": "mock",
+      "title": "Timed mock",
+      "conceptIds": [],
+      "problemIds": [],
+      "focus": "2 problems × 45 min + honest self-review against a rubric.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "52",
+      "phaseId": "p7",
+      "kind": "mock",
+      "title": "Graph + DP focus mock",
+      "conceptIds": [],
+      "problemIds": [],
+      "focus": "The two areas that most often decide a senior verdict.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "53",
+      "phaseId": "p7",
+      "kind": "mock",
+      "title": "Systems live-coding mock",
+      "conceptIds": [],
+      "problemIds": [],
+      "focus": "LRU cache, rate limiter, or segment tree — coded live, explained.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "54",
+      "phaseId": "p7",
+      "kind": "mock",
+      "title": "Full loop simulation",
+      "conceptIds": [],
+      "problemIds": [],
+      "focus": "Two back-to-back 45-min rounds. Record yourself; watch it back.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "55",
+      "phaseId": "p7",
+      "kind": "mock",
+      "title": "Weak-area repair",
+      "conceptIds": [],
+      "problemIds": [],
+      "focus": "Re-drill whatever you fumbled on Days 50–54. Targeted, not broad.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "56",
+      "phaseId": "p7",
+      "kind": "mock",
+      "title": "Full loop simulation — round 2",
+      "conceptIds": [],
+      "problemIds": [],
+      "focus": "Same format. Compare against Day 54; the delta is your progress.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "57",
+      "phaseId": "p8",
+      "kind": "buf",
+      "title": "Hardest problems re-solve",
+      "conceptIds": [],
+      "problemIds": [
+        "text-justification",
+        "max-points-on-a-line"
+      ],
+      "focus": "Your personal hardest list, from scratch — includes the two Top-150 brutes.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "58",
+      "phaseId": "p8",
+      "kind": "buf",
+      "title": "Speed round — Top-150 fundamentals sweep",
+      "conceptIds": [],
+      "problemIds": [
+        "remove-element",
+        "remove-duplicates-from-sorted-array",
+        "rotate-array",
+        "two-sum",
+        "valid-anagram",
+        "group-anagrams",
+        "ransom-note",
+        "isomorphic-strings",
+        "word-pattern",
+        "roman-to-integer",
+        "integer-to-roman",
+        "length-of-last-word",
+        "reverse-words-in-a-string",
+        "zigzag-conversion",
+        "find-the-index-of-the-first-occurrence-in-a-string",
+        "palindrome-number",
+        "plus-one",
+        "factorial-trailing-zeroes"
+      ],
+      "focus": "8–10 × 15 min. Clears remaining string / hashmap / math basics under a clock.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "59",
+      "phaseId": "p8",
+      "kind": "buf",
+      "title": "Light review",
+      "conceptIds": [],
+      "problemIds": [],
+      "focus": "One calm pass over all 41 trigger notes. No cramming.",
+      "note": "",
+      "plannedDate": null
+    },
+    {
+      "id": "60",
+      "phaseId": "p8",
+      "kind": "buf",
+      "title": "Final light mock or rest",
+      "conceptIds": [],
+      "problemIds": [],
+      "focus": "One easy round to stay warm, or rest. You're interview-ready.",
+      "note": "",
+      "plannedDate": null
+    }
+  ],
+  "problems": {
+    "two-sum-ii-input-array-is-sorted": {
+      "id": "two-sum-ii-input-array-is-sorted",
+      "kind": "leetcode",
+      "slug": "two-sum-ii-input-array-is-sorted",
+      "url": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/",
+      "title": "Two Sum II",
+      "diff": "M",
+      "conceptIds": [
+        "two-pointers-converging"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "container-with-most-water": {
+      "id": "container-with-most-water",
+      "kind": "leetcode",
+      "slug": "container-with-most-water",
+      "url": "https://leetcode.com/problems/container-with-most-water/",
+      "title": "Container With Most Water",
+      "diff": "M",
+      "conceptIds": [
+        "two-pointers-converging"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "3sum": {
+      "id": "3sum",
+      "kind": "leetcode",
+      "slug": "3sum",
+      "url": "https://leetcode.com/problems/3sum/",
+      "title": "3Sum",
+      "diff": "M",
+      "conceptIds": [
+        "two-pointers-converging"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "valid-palindrome": {
+      "id": "valid-palindrome",
+      "kind": "leetcode",
+      "slug": "valid-palindrome",
+      "url": "https://leetcode.com/problems/valid-palindrome/",
+      "title": "Valid Palindrome",
+      "diff": "E",
+      "conceptIds": [
+        "two-pointers-converging"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "is-subsequence": {
+      "id": "is-subsequence",
+      "kind": "leetcode",
+      "slug": "is-subsequence",
+      "url": "https://leetcode.com/problems/is-subsequence/",
+      "title": "Is Subsequence",
+      "diff": "E",
+      "conceptIds": [
+        "two-pointers-converging"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "merge-sorted-array": {
+      "id": "merge-sorted-array",
+      "kind": "leetcode",
+      "slug": "merge-sorted-array",
+      "url": "https://leetcode.com/problems/merge-sorted-array/",
+      "title": "Merge Sorted Array",
+      "diff": "E",
+      "conceptIds": [
+        "two-pointers-converging"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "remove-duplicates-from-sorted-array-ii": {
+      "id": "remove-duplicates-from-sorted-array-ii",
+      "kind": "leetcode",
+      "slug": "remove-duplicates-from-sorted-array-ii",
+      "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/",
+      "title": "Remove Duplicates from Sorted Array II",
+      "diff": "M",
+      "conceptIds": [
+        "two-pointers-converging"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "linked-list-cycle": {
+      "id": "linked-list-cycle",
+      "kind": "leetcode",
+      "slug": "linked-list-cycle",
+      "url": "https://leetcode.com/problems/linked-list-cycle/",
+      "title": "Linked List Cycle",
+      "diff": "E",
+      "conceptIds": [
+        "fast-and-slow-pointers-floyd-s"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "happy-number": {
+      "id": "happy-number",
+      "kind": "leetcode",
+      "slug": "happy-number",
+      "url": "https://leetcode.com/problems/happy-number/",
+      "title": "Happy Number",
+      "diff": "E",
+      "conceptIds": [
+        "fast-and-slow-pointers-floyd-s"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "remove-nth-node-from-end-of-list": {
+      "id": "remove-nth-node-from-end-of-list",
+      "kind": "leetcode",
+      "slug": "remove-nth-node-from-end-of-list",
+      "url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+      "title": "Remove Nth Node From End",
+      "diff": "M",
+      "conceptIds": [
+        "fast-and-slow-pointers-floyd-s"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "add-two-numbers": {
+      "id": "add-two-numbers",
+      "kind": "leetcode",
+      "slug": "add-two-numbers",
+      "url": "https://leetcode.com/problems/add-two-numbers/",
+      "title": "Add Two Numbers",
+      "diff": "M",
+      "conceptIds": [
+        "fast-and-slow-pointers-floyd-s"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "copy-list-with-random-pointer": {
+      "id": "copy-list-with-random-pointer",
+      "kind": "leetcode",
+      "slug": "copy-list-with-random-pointer",
+      "url": "https://leetcode.com/problems/copy-list-with-random-pointer/",
+      "title": "Copy List with Random Pointer",
+      "diff": "M",
+      "conceptIds": [
+        "fast-and-slow-pointers-floyd-s"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "substring-with-concatenation-of-all-words": {
+      "id": "substring-with-concatenation-of-all-words",
+      "kind": "leetcode",
+      "slug": "substring-with-concatenation-of-all-words",
+      "url": "https://leetcode.com/problems/substring-with-concatenation-of-all-words/",
+      "title": "Substring with Concatenation of All Words",
+      "diff": "H",
+      "conceptIds": [
+        "sliding-window-fixed"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "longest-substring-without-repeating-characters": {
+      "id": "longest-substring-without-repeating-characters",
+      "kind": "leetcode",
+      "slug": "longest-substring-without-repeating-characters",
+      "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+      "title": "Longest Substring Without Repeating Characters",
+      "diff": "M",
+      "conceptIds": [
+        "sliding-window-dynamic"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "minimum-size-subarray-sum": {
+      "id": "minimum-size-subarray-sum",
+      "kind": "leetcode",
+      "slug": "minimum-size-subarray-sum",
+      "url": "https://leetcode.com/problems/minimum-size-subarray-sum/",
+      "title": "Minimum Size Subarray Sum",
+      "diff": "M",
+      "conceptIds": [
+        "sliding-window-dynamic"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "minimum-window-substring": {
+      "id": "minimum-window-substring",
+      "kind": "leetcode",
+      "slug": "minimum-window-substring",
+      "url": "https://leetcode.com/problems/minimum-window-substring/",
+      "title": "Minimum Window Substring",
+      "diff": "H",
+      "conceptIds": [
+        "sliding-window-dynamic"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "contains-duplicate-ii": {
+      "id": "contains-duplicate-ii",
+      "kind": "leetcode",
+      "slug": "contains-duplicate-ii",
+      "url": "https://leetcode.com/problems/contains-duplicate-ii/",
+      "title": "Contains Duplicate II",
+      "diff": "E",
+      "conceptIds": [
+        "sliding-window-dynamic"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "product-of-array-except-self": {
+      "id": "product-of-array-except-self",
+      "kind": "leetcode",
+      "slug": "product-of-array-except-self",
+      "url": "https://leetcode.com/problems/product-of-array-except-self/",
+      "title": "Product of Array Except Self",
+      "diff": "M",
+      "conceptIds": [
+        "prefix-sums"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "valid-parentheses": {
+      "id": "valid-parentheses",
+      "kind": "leetcode",
+      "slug": "valid-parentheses",
+      "url": "https://leetcode.com/problems/valid-parentheses/",
+      "title": "Valid Parentheses",
+      "diff": "E",
+      "conceptIds": [
+        "monotonic-stack"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "min-stack": {
+      "id": "min-stack",
+      "kind": "leetcode",
+      "slug": "min-stack",
+      "url": "https://leetcode.com/problems/min-stack/",
+      "title": "Min Stack",
+      "diff": "M",
+      "conceptIds": [
+        "monotonic-stack"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "evaluate-reverse-polish-notation": {
+      "id": "evaluate-reverse-polish-notation",
+      "kind": "leetcode",
+      "slug": "evaluate-reverse-polish-notation",
+      "url": "https://leetcode.com/problems/evaluate-reverse-polish-notation/",
+      "title": "Evaluate Reverse Polish Notation",
+      "diff": "M",
+      "conceptIds": [
+        "monotonic-stack"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "simplify-path": {
+      "id": "simplify-path",
+      "kind": "leetcode",
+      "slug": "simplify-path",
+      "url": "https://leetcode.com/problems/simplify-path/",
+      "title": "Simplify Path",
+      "diff": "M",
+      "conceptIds": [
+        "monotonic-stack"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "basic-calculator": {
+      "id": "basic-calculator",
+      "kind": "leetcode",
+      "slug": "basic-calculator",
+      "url": "https://leetcode.com/problems/basic-calculator/",
+      "title": "Basic Calculator",
+      "diff": "H",
+      "conceptIds": [
+        "monotonic-stack"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "trapping-rain-water": {
+      "id": "trapping-rain-water",
+      "kind": "leetcode",
+      "slug": "trapping-rain-water",
+      "url": "https://leetcode.com/problems/trapping-rain-water/",
+      "title": "Trapping Rain Water",
+      "diff": "H",
+      "conceptIds": [
+        "monotonic-stack"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "search-insert-position": {
+      "id": "search-insert-position",
+      "kind": "leetcode",
+      "slug": "search-insert-position",
+      "url": "https://leetcode.com/problems/search-insert-position/",
+      "title": "Search Insert Position",
+      "diff": "E",
+      "conceptIds": [
+        "binary-search-bisection"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "search-a-2d-matrix": {
+      "id": "search-a-2d-matrix",
+      "kind": "leetcode",
+      "slug": "search-a-2d-matrix",
+      "url": "https://leetcode.com/problems/search-a-2d-matrix/",
+      "title": "Search a 2D Matrix",
+      "diff": "M",
+      "conceptIds": [
+        "binary-search-bisection"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "find-peak-element": {
+      "id": "find-peak-element",
+      "kind": "leetcode",
+      "slug": "find-peak-element",
+      "url": "https://leetcode.com/problems/find-peak-element/",
+      "title": "Find Peak Element",
+      "diff": "M",
+      "conceptIds": [
+        "binary-search-bisection"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "search-in-rotated-sorted-array": {
+      "id": "search-in-rotated-sorted-array",
+      "kind": "leetcode",
+      "slug": "search-in-rotated-sorted-array",
+      "url": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+      "title": "Search in Rotated Sorted Array",
+      "diff": "M",
+      "conceptIds": [
+        "binary-search-bisection"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "find-first-and-last-position-of-element-in-sorted-array": {
+      "id": "find-first-and-last-position-of-element-in-sorted-array",
+      "kind": "leetcode",
+      "slug": "find-first-and-last-position-of-element-in-sorted-array",
+      "url": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/",
+      "title": "Find First and Last Position",
+      "diff": "M",
+      "conceptIds": [
+        "binary-search-bisection"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "find-minimum-in-rotated-sorted-array": {
+      "id": "find-minimum-in-rotated-sorted-array",
+      "kind": "leetcode",
+      "slug": "find-minimum-in-rotated-sorted-array",
+      "url": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
+      "title": "Find Minimum in Rotated Sorted Array",
+      "diff": "M",
+      "conceptIds": [
+        "binary-search-bisection"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "sqrtx": {
+      "id": "sqrtx",
+      "kind": "leetcode",
+      "slug": "sqrtx",
+      "url": "https://leetcode.com/problems/sqrtx/",
+      "title": "Sqrt(x)",
+      "diff": "E",
+      "conceptIds": [
+        "binary-search-on-answer-space"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "median-of-two-sorted-arrays": {
+      "id": "median-of-two-sorted-arrays",
+      "kind": "leetcode",
+      "slug": "median-of-two-sorted-arrays",
+      "url": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
+      "title": "Median of Two Sorted Arrays",
+      "diff": "H",
+      "conceptIds": [
+        "binary-search-on-answer-space"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "kth-largest-element-in-an-array": {
+      "id": "kth-largest-element-in-an-array",
+      "kind": "leetcode",
+      "slug": "kth-largest-element-in-an-array",
+      "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+      "title": "Kth Largest Element in an Array",
+      "diff": "M",
+      "conceptIds": [
+        "min-max-heap-top-k"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "ipo": {
+      "id": "ipo",
+      "kind": "leetcode",
+      "slug": "ipo",
+      "url": "https://leetcode.com/problems/ipo/",
+      "title": "IPO",
+      "diff": "H",
+      "conceptIds": [
+        "min-max-heap-top-k"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "find-k-pairs-with-smallest-sums": {
+      "id": "find-k-pairs-with-smallest-sums",
+      "kind": "leetcode",
+      "slug": "find-k-pairs-with-smallest-sums",
+      "url": "https://leetcode.com/problems/find-k-pairs-with-smallest-sums/",
+      "title": "Find K Pairs with Smallest Sums",
+      "diff": "M",
+      "conceptIds": [
+        "min-max-heap-top-k"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "find-median-from-data-stream": {
+      "id": "find-median-from-data-stream",
+      "kind": "leetcode",
+      "slug": "find-median-from-data-stream",
+      "url": "https://leetcode.com/problems/find-median-from-data-stream/",
+      "title": "Find Median from Data Stream",
+      "diff": "H",
+      "conceptIds": [
+        "two-heaps"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "merge-two-sorted-lists": {
+      "id": "merge-two-sorted-lists",
+      "kind": "leetcode",
+      "slug": "merge-two-sorted-lists",
+      "url": "https://leetcode.com/problems/merge-two-sorted-lists/",
+      "title": "Merge Two Sorted Lists",
+      "diff": "E",
+      "conceptIds": [
+        "k-way-merge"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "merge-k-sorted-lists": {
+      "id": "merge-k-sorted-lists",
+      "kind": "leetcode",
+      "slug": "merge-k-sorted-lists",
+      "url": "https://leetcode.com/problems/merge-k-sorted-lists/",
+      "title": "Merge k Sorted Lists",
+      "diff": "H",
+      "conceptIds": [
+        "k-way-merge"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "summary-ranges": {
+      "id": "summary-ranges",
+      "kind": "leetcode",
+      "slug": "summary-ranges",
+      "url": "https://leetcode.com/problems/summary-ranges/",
+      "title": "Summary Ranges",
+      "diff": "E",
+      "conceptIds": [
+        "interval-sweep-line"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "merge-intervals": {
+      "id": "merge-intervals",
+      "kind": "leetcode",
+      "slug": "merge-intervals",
+      "url": "https://leetcode.com/problems/merge-intervals/",
+      "title": "Merge Intervals",
+      "diff": "M",
+      "conceptIds": [
+        "interval-sweep-line"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "insert-interval": {
+      "id": "insert-interval",
+      "kind": "leetcode",
+      "slug": "insert-interval",
+      "url": "https://leetcode.com/problems/insert-interval/",
+      "title": "Insert Interval",
+      "diff": "M",
+      "conceptIds": [
+        "interval-sweep-line"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "minimum-number-of-arrows-to-burst-balloons": {
+      "id": "minimum-number-of-arrows-to-burst-balloons",
+      "kind": "leetcode",
+      "slug": "minimum-number-of-arrows-to-burst-balloons",
+      "url": "https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/",
+      "title": "Minimum Arrows to Burst Balloons",
+      "diff": "M",
+      "conceptIds": [
+        "interval-sweep-line"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "number-of-islands": {
+      "id": "number-of-islands",
+      "kind": "leetcode",
+      "slug": "number-of-islands",
+      "url": "https://leetcode.com/problems/number-of-islands/",
+      "title": "Number of Islands",
+      "diff": "M",
+      "conceptIds": [
+        "matrix-grid-traversal-bfs-dfs"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "surrounded-regions": {
+      "id": "surrounded-regions",
+      "kind": "leetcode",
+      "slug": "surrounded-regions",
+      "url": "https://leetcode.com/problems/surrounded-regions/",
+      "title": "Surrounded Regions",
+      "diff": "M",
+      "conceptIds": [
+        "matrix-grid-traversal-bfs-dfs"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "clone-graph": {
+      "id": "clone-graph",
+      "kind": "leetcode",
+      "slug": "clone-graph",
+      "url": "https://leetcode.com/problems/clone-graph/",
+      "title": "Clone Graph",
+      "diff": "M",
+      "conceptIds": [
+        "matrix-grid-traversal-bfs-dfs"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "evaluate-division": {
+      "id": "evaluate-division",
+      "kind": "leetcode",
+      "slug": "evaluate-division",
+      "url": "https://leetcode.com/problems/evaluate-division/",
+      "title": "Evaluate Division",
+      "diff": "M",
+      "conceptIds": [
+        "matrix-grid-traversal-bfs-dfs"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "snakes-and-ladders": {
+      "id": "snakes-and-ladders",
+      "kind": "leetcode",
+      "slug": "snakes-and-ladders",
+      "url": "https://leetcode.com/problems/snakes-and-ladders/",
+      "title": "Snakes and Ladders",
+      "diff": "M",
+      "conceptIds": [
+        "matrix-grid-traversal-bfs-dfs"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "minimum-genetic-mutation": {
+      "id": "minimum-genetic-mutation",
+      "kind": "leetcode",
+      "slug": "minimum-genetic-mutation",
+      "url": "https://leetcode.com/problems/minimum-genetic-mutation/",
+      "title": "Minimum Genetic Mutation",
+      "diff": "M",
+      "conceptIds": [
+        "matrix-grid-traversal-bfs-dfs"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "word-ladder": {
+      "id": "word-ladder",
+      "kind": "leetcode",
+      "slug": "word-ladder",
+      "url": "https://leetcode.com/problems/word-ladder/",
+      "title": "Word Ladder",
+      "diff": "H",
+      "conceptIds": [
+        "matrix-grid-traversal-bfs-dfs"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "course-schedule": {
+      "id": "course-schedule",
+      "kind": "leetcode",
+      "slug": "course-schedule",
+      "url": "https://leetcode.com/problems/course-schedule/",
+      "title": "Course Schedule",
+      "diff": "M",
+      "conceptIds": [
+        "topological-sort-kahn-s"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "course-schedule-ii": {
+      "id": "course-schedule-ii",
+      "kind": "leetcode",
+      "slug": "course-schedule-ii",
+      "url": "https://leetcode.com/problems/course-schedule-ii/",
+      "title": "Course Schedule II",
+      "diff": "M",
+      "conceptIds": [
+        "topological-sort-kahn-s"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "longest-consecutive-sequence": {
+      "id": "longest-consecutive-sequence",
+      "kind": "leetcode",
+      "slug": "longest-consecutive-sequence",
+      "url": "https://leetcode.com/problems/longest-consecutive-sequence/",
+      "title": "Longest Consecutive Sequence",
+      "diff": "M",
+      "conceptIds": [
+        "union-find-dsu"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "implement-trie-prefix-tree": {
+      "id": "implement-trie-prefix-tree",
+      "kind": "leetcode",
+      "slug": "implement-trie-prefix-tree",
+      "url": "https://leetcode.com/problems/implement-trie-prefix-tree/",
+      "title": "Implement Trie",
+      "diff": "M",
+      "conceptIds": [
+        "trie-prefix-tree"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "design-add-and-search-words-data-structure": {
+      "id": "design-add-and-search-words-data-structure",
+      "kind": "leetcode",
+      "slug": "design-add-and-search-words-data-structure",
+      "url": "https://leetcode.com/problems/design-add-and-search-words-data-structure/",
+      "title": "Add and Search Word",
+      "diff": "M",
+      "conceptIds": [
+        "trie-prefix-tree"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "word-search-ii": {
+      "id": "word-search-ii",
+      "kind": "leetcode",
+      "slug": "word-search-ii",
+      "url": "https://leetcode.com/problems/word-search-ii/",
+      "title": "Word Search II",
+      "diff": "H",
+      "conceptIds": [
+        "trie-prefix-tree"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "longest-common-prefix": {
+      "id": "longest-common-prefix",
+      "kind": "leetcode",
+      "slug": "longest-common-prefix",
+      "url": "https://leetcode.com/problems/longest-common-prefix/",
+      "title": "Longest Common Prefix",
+      "diff": "E",
+      "conceptIds": [
+        "trie-prefix-tree"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "letter-combinations-of-a-phone-number": {
+      "id": "letter-combinations-of-a-phone-number",
+      "kind": "leetcode",
+      "slug": "letter-combinations-of-a-phone-number",
+      "url": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/",
+      "title": "Letter Combinations of a Phone Number",
+      "diff": "M",
+      "conceptIds": [
+        "backtracking-with-pruning"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "combinations": {
+      "id": "combinations",
+      "kind": "leetcode",
+      "slug": "combinations",
+      "url": "https://leetcode.com/problems/combinations/",
+      "title": "Combinations",
+      "diff": "M",
+      "conceptIds": [
+        "backtracking-with-pruning"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "permutations": {
+      "id": "permutations",
+      "kind": "leetcode",
+      "slug": "permutations",
+      "url": "https://leetcode.com/problems/permutations/",
+      "title": "Permutations",
+      "diff": "M",
+      "conceptIds": [
+        "backtracking-with-pruning"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "combination-sum": {
+      "id": "combination-sum",
+      "kind": "leetcode",
+      "slug": "combination-sum",
+      "url": "https://leetcode.com/problems/combination-sum/",
+      "title": "Combination Sum",
+      "diff": "M",
+      "conceptIds": [
+        "backtracking-with-pruning"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "n-queens-ii": {
+      "id": "n-queens-ii",
+      "kind": "leetcode",
+      "slug": "n-queens-ii",
+      "url": "https://leetcode.com/problems/n-queens-ii/",
+      "title": "N-Queens II",
+      "diff": "H",
+      "conceptIds": [
+        "backtracking-with-pruning"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "generate-parentheses": {
+      "id": "generate-parentheses",
+      "kind": "leetcode",
+      "slug": "generate-parentheses",
+      "url": "https://leetcode.com/problems/generate-parentheses/",
+      "title": "Generate Parentheses",
+      "diff": "M",
+      "conceptIds": [
+        "backtracking-with-pruning"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "word-search": {
+      "id": "word-search",
+      "kind": "leetcode",
+      "slug": "word-search",
+      "url": "https://leetcode.com/problems/word-search/",
+      "title": "Word Search",
+      "diff": "M",
+      "conceptIds": [
+        "backtracking-with-pruning"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "binary-tree-maximum-path-sum": {
+      "id": "binary-tree-maximum-path-sum",
+      "kind": "leetcode",
+      "slug": "binary-tree-maximum-path-sum",
+      "url": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
+      "title": "Binary Tree Maximum Path Sum",
+      "diff": "H",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "lowest-common-ancestor-of-a-binary-tree": {
+      "id": "lowest-common-ancestor-of-a-binary-tree",
+      "kind": "leetcode",
+      "slug": "lowest-common-ancestor-of-a-binary-tree",
+      "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
+      "title": "Lowest Common Ancestor",
+      "diff": "M",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "construct-binary-tree-from-preorder-and-inorder-traversal": {
+      "id": "construct-binary-tree-from-preorder-and-inorder-traversal",
+      "kind": "leetcode",
+      "slug": "construct-binary-tree-from-preorder-and-inorder-traversal",
+      "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
+      "title": "Construct BT from Preorder & Inorder",
+      "diff": "M",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "construct-binary-tree-from-inorder-and-postorder-traversal": {
+      "id": "construct-binary-tree-from-inorder-and-postorder-traversal",
+      "kind": "leetcode",
+      "slug": "construct-binary-tree-from-inorder-and-postorder-traversal",
+      "url": "https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/",
+      "title": "Construct BT from Inorder & Postorder",
+      "diff": "M",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "climbing-stairs": {
+      "id": "climbing-stairs",
+      "kind": "leetcode",
+      "slug": "climbing-stairs",
+      "url": "https://leetcode.com/problems/climbing-stairs/",
+      "title": "Climbing Stairs",
+      "diff": "E",
+      "conceptIds": [
+        "1-d-dynamic-programming"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "house-robber": {
+      "id": "house-robber",
+      "kind": "leetcode",
+      "slug": "house-robber",
+      "url": "https://leetcode.com/problems/house-robber/",
+      "title": "House Robber",
+      "diff": "M",
+      "conceptIds": [
+        "1-d-dynamic-programming"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "maximum-subarray": {
+      "id": "maximum-subarray",
+      "kind": "leetcode",
+      "slug": "maximum-subarray",
+      "url": "https://leetcode.com/problems/maximum-subarray/",
+      "title": "Maximum Subarray",
+      "diff": "M",
+      "conceptIds": [
+        "1-d-dynamic-programming"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "maximum-sum-circular-subarray": {
+      "id": "maximum-sum-circular-subarray",
+      "kind": "leetcode",
+      "slug": "maximum-sum-circular-subarray",
+      "url": "https://leetcode.com/problems/maximum-sum-circular-subarray/",
+      "title": "Maximum Sum Circular Subarray",
+      "diff": "M",
+      "conceptIds": [
+        "1-d-dynamic-programming"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "best-time-to-buy-and-sell-stock": {
+      "id": "best-time-to-buy-and-sell-stock",
+      "kind": "leetcode",
+      "slug": "best-time-to-buy-and-sell-stock",
+      "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+      "title": "Best Time to Buy and Sell Stock",
+      "diff": "E",
+      "conceptIds": [
+        "1-d-dynamic-programming"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "longest-increasing-subsequence": {
+      "id": "longest-increasing-subsequence",
+      "kind": "leetcode",
+      "slug": "longest-increasing-subsequence",
+      "url": "https://leetcode.com/problems/longest-increasing-subsequence/",
+      "title": "Longest Increasing Subsequence",
+      "diff": "M",
+      "conceptIds": [
+        "1-d-dynamic-programming"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "triangle": {
+      "id": "triangle",
+      "kind": "leetcode",
+      "slug": "triangle",
+      "url": "https://leetcode.com/problems/triangle/",
+      "title": "Triangle",
+      "diff": "M",
+      "conceptIds": [
+        "2-d-dynamic-programming"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "minimum-path-sum": {
+      "id": "minimum-path-sum",
+      "kind": "leetcode",
+      "slug": "minimum-path-sum",
+      "url": "https://leetcode.com/problems/minimum-path-sum/",
+      "title": "Minimum Path Sum",
+      "diff": "M",
+      "conceptIds": [
+        "2-d-dynamic-programming"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "unique-paths-ii": {
+      "id": "unique-paths-ii",
+      "kind": "leetcode",
+      "slug": "unique-paths-ii",
+      "url": "https://leetcode.com/problems/unique-paths-ii/",
+      "title": "Unique Paths II",
+      "diff": "M",
+      "conceptIds": [
+        "2-d-dynamic-programming"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "maximal-square": {
+      "id": "maximal-square",
+      "kind": "leetcode",
+      "slug": "maximal-square",
+      "url": "https://leetcode.com/problems/maximal-square/",
+      "title": "Maximal Square",
+      "diff": "M",
+      "conceptIds": [
+        "2-d-dynamic-programming"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "coin-change": {
+      "id": "coin-change",
+      "kind": "leetcode",
+      "slug": "coin-change",
+      "url": "https://leetcode.com/problems/coin-change/",
+      "title": "Coin Change",
+      "diff": "M",
+      "conceptIds": [
+        "0-1-knapsack-and-bounded-state"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "word-break": {
+      "id": "word-break",
+      "kind": "leetcode",
+      "slug": "word-break",
+      "url": "https://leetcode.com/problems/word-break/",
+      "title": "Word Break",
+      "diff": "M",
+      "conceptIds": [
+        "0-1-knapsack-and-bounded-state"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "edit-distance": {
+      "id": "edit-distance",
+      "kind": "leetcode",
+      "slug": "edit-distance",
+      "url": "https://leetcode.com/problems/edit-distance/",
+      "title": "Edit Distance",
+      "diff": "M",
+      "conceptIds": [
+        "lcs-edit-distance"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "longest-palindromic-substring": {
+      "id": "longest-palindromic-substring",
+      "kind": "leetcode",
+      "slug": "longest-palindromic-substring",
+      "url": "https://leetcode.com/problems/longest-palindromic-substring/",
+      "title": "Longest Palindromic Substring",
+      "diff": "M",
+      "conceptIds": [
+        "lcs-edit-distance"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "interleaving-string": {
+      "id": "interleaving-string",
+      "kind": "leetcode",
+      "slug": "interleaving-string",
+      "url": "https://leetcode.com/problems/interleaving-string/",
+      "title": "Interleaving String",
+      "diff": "M",
+      "conceptIds": [
+        "lcs-edit-distance"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "best-time-to-buy-and-sell-stock-iii": {
+      "id": "best-time-to-buy-and-sell-stock-iii",
+      "kind": "leetcode",
+      "slug": "best-time-to-buy-and-sell-stock-iii",
+      "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/",
+      "title": "Best Time to Buy and Sell Stock III",
+      "diff": "H",
+      "conceptIds": [
+        "state-machine-dp"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "best-time-to-buy-and-sell-stock-iv": {
+      "id": "best-time-to-buy-and-sell-stock-iv",
+      "kind": "leetcode",
+      "slug": "best-time-to-buy-and-sell-stock-iv",
+      "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/",
+      "title": "Best Time to Buy and Sell Stock IV",
+      "diff": "H",
+      "conceptIds": [
+        "state-machine-dp"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "convert-sorted-array-to-binary-search-tree": {
+      "id": "convert-sorted-array-to-binary-search-tree",
+      "kind": "leetcode",
+      "slug": "convert-sorted-array-to-binary-search-tree",
+      "url": "https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/",
+      "title": "Convert Sorted Array to BST",
+      "diff": "E",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "sort-list": {
+      "id": "sort-list",
+      "kind": "leetcode",
+      "slug": "sort-list",
+      "url": "https://leetcode.com/problems/sort-list/",
+      "title": "Sort List",
+      "diff": "M",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "construct-quad-tree": {
+      "id": "construct-quad-tree",
+      "kind": "leetcode",
+      "slug": "construct-quad-tree",
+      "url": "https://leetcode.com/problems/construct-quad-tree/",
+      "title": "Construct Quad Tree",
+      "diff": "M",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "powx-n": {
+      "id": "powx-n",
+      "kind": "leetcode",
+      "slug": "powx-n",
+      "url": "https://leetcode.com/problems/powx-n/",
+      "title": "Pow(x, n)",
+      "diff": "M",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "validate-binary-search-tree": {
+      "id": "validate-binary-search-tree",
+      "kind": "leetcode",
+      "slug": "validate-binary-search-tree",
+      "url": "https://leetcode.com/problems/validate-binary-search-tree/",
+      "title": "Validate Binary Search Tree",
+      "diff": "M",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "kth-smallest-element-in-a-bst": {
+      "id": "kth-smallest-element-in-a-bst",
+      "kind": "leetcode",
+      "slug": "kth-smallest-element-in-a-bst",
+      "url": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
+      "title": "Kth Smallest Element in a BST",
+      "diff": "M",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "minimum-absolute-difference-in-bst": {
+      "id": "minimum-absolute-difference-in-bst",
+      "kind": "leetcode",
+      "slug": "minimum-absolute-difference-in-bst",
+      "url": "https://leetcode.com/problems/minimum-absolute-difference-in-bst/",
+      "title": "Minimum Absolute Difference in BST",
+      "diff": "E",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "binary-search-tree-iterator": {
+      "id": "binary-search-tree-iterator",
+      "kind": "leetcode",
+      "slug": "binary-search-tree-iterator",
+      "url": "https://leetcode.com/problems/binary-search-tree-iterator/",
+      "title": "Binary Search Tree Iterator",
+      "diff": "M",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "best-time-to-buy-and-sell-stock-ii": {
+      "id": "best-time-to-buy-and-sell-stock-ii",
+      "kind": "leetcode",
+      "slug": "best-time-to-buy-and-sell-stock-ii",
+      "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/",
+      "title": "Best Time to Buy and Sell Stock II",
+      "diff": "M",
+      "conceptIds": [
+        "greedy-exchange-arguments"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "jump-game": {
+      "id": "jump-game",
+      "kind": "leetcode",
+      "slug": "jump-game",
+      "url": "https://leetcode.com/problems/jump-game/",
+      "title": "Jump Game",
+      "diff": "M",
+      "conceptIds": [
+        "greedy-exchange-arguments"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "jump-game-ii": {
+      "id": "jump-game-ii",
+      "kind": "leetcode",
+      "slug": "jump-game-ii",
+      "url": "https://leetcode.com/problems/jump-game-ii/",
+      "title": "Jump Game II",
+      "diff": "M",
+      "conceptIds": [
+        "greedy-exchange-arguments"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "gas-station": {
+      "id": "gas-station",
+      "kind": "leetcode",
+      "slug": "gas-station",
+      "url": "https://leetcode.com/problems/gas-station/",
+      "title": "Gas Station",
+      "diff": "M",
+      "conceptIds": [
+        "greedy-exchange-arguments"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "candy": {
+      "id": "candy",
+      "kind": "leetcode",
+      "slug": "candy",
+      "url": "https://leetcode.com/problems/candy/",
+      "title": "Candy",
+      "diff": "H",
+      "conceptIds": [
+        "greedy-exchange-arguments"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "h-index": {
+      "id": "h-index",
+      "kind": "leetcode",
+      "slug": "h-index",
+      "url": "https://leetcode.com/problems/h-index/",
+      "title": "H-Index",
+      "diff": "M",
+      "conceptIds": [
+        "greedy-exchange-arguments"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "single-number": {
+      "id": "single-number",
+      "kind": "leetcode",
+      "slug": "single-number",
+      "url": "https://leetcode.com/problems/single-number/",
+      "title": "Single Number",
+      "diff": "E",
+      "conceptIds": [
+        "bit-manipulation-and-bitmasks"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "single-number-ii": {
+      "id": "single-number-ii",
+      "kind": "leetcode",
+      "slug": "single-number-ii",
+      "url": "https://leetcode.com/problems/single-number-ii/",
+      "title": "Single Number II",
+      "diff": "M",
+      "conceptIds": [
+        "bit-manipulation-and-bitmasks"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "number-of-1-bits": {
+      "id": "number-of-1-bits",
+      "kind": "leetcode",
+      "slug": "number-of-1-bits",
+      "url": "https://leetcode.com/problems/number-of-1-bits/",
+      "title": "Number of 1 Bits",
+      "diff": "E",
+      "conceptIds": [
+        "bit-manipulation-and-bitmasks"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "reverse-bits": {
+      "id": "reverse-bits",
+      "kind": "leetcode",
+      "slug": "reverse-bits",
+      "url": "https://leetcode.com/problems/reverse-bits/",
+      "title": "Reverse Bits",
+      "diff": "E",
+      "conceptIds": [
+        "bit-manipulation-and-bitmasks"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "add-binary": {
+      "id": "add-binary",
+      "kind": "leetcode",
+      "slug": "add-binary",
+      "url": "https://leetcode.com/problems/add-binary/",
+      "title": "Add Binary",
+      "diff": "E",
+      "conceptIds": [
+        "bit-manipulation-and-bitmasks"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "bitwise-and-of-numbers-range": {
+      "id": "bitwise-and-of-numbers-range",
+      "kind": "leetcode",
+      "slug": "bitwise-and-of-numbers-range",
+      "url": "https://leetcode.com/problems/bitwise-and-of-numbers-range/",
+      "title": "Bitwise AND of Numbers Range",
+      "diff": "M",
+      "conceptIds": [
+        "bit-manipulation-and-bitmasks"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "majority-element": {
+      "id": "majority-element",
+      "kind": "leetcode",
+      "slug": "majority-element",
+      "url": "https://leetcode.com/problems/majority-element/",
+      "title": "Majority Element",
+      "diff": "E",
+      "conceptIds": [
+        "bit-manipulation-and-bitmasks"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "set-matrix-zeroes": {
+      "id": "set-matrix-zeroes",
+      "kind": "leetcode",
+      "slug": "set-matrix-zeroes",
+      "url": "https://leetcode.com/problems/set-matrix-zeroes/",
+      "title": "Set Matrix Zeroes",
+      "diff": "M",
+      "conceptIds": [
+        "cyclic-sort-in-place-matrix"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "spiral-matrix": {
+      "id": "spiral-matrix",
+      "kind": "leetcode",
+      "slug": "spiral-matrix",
+      "url": "https://leetcode.com/problems/spiral-matrix/",
+      "title": "Spiral Matrix",
+      "diff": "M",
+      "conceptIds": [
+        "cyclic-sort-in-place-matrix"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "rotate-image": {
+      "id": "rotate-image",
+      "kind": "leetcode",
+      "slug": "rotate-image",
+      "url": "https://leetcode.com/problems/rotate-image/",
+      "title": "Rotate Image",
+      "diff": "M",
+      "conceptIds": [
+        "cyclic-sort-in-place-matrix"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "game-of-life": {
+      "id": "game-of-life",
+      "kind": "leetcode",
+      "slug": "game-of-life",
+      "url": "https://leetcode.com/problems/game-of-life/",
+      "title": "Game of Life",
+      "diff": "M",
+      "conceptIds": [
+        "cyclic-sort-in-place-matrix"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "valid-sudoku": {
+      "id": "valid-sudoku",
+      "kind": "leetcode",
+      "slug": "valid-sudoku",
+      "url": "https://leetcode.com/problems/valid-sudoku/",
+      "title": "Valid Sudoku",
+      "diff": "M",
+      "conceptIds": [
+        "cyclic-sort-in-place-matrix"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "reverse-linked-list-ii": {
+      "id": "reverse-linked-list-ii",
+      "kind": "leetcode",
+      "slug": "reverse-linked-list-ii",
+      "url": "https://leetcode.com/problems/reverse-linked-list-ii/",
+      "title": "Reverse Linked List II",
+      "diff": "M",
+      "conceptIds": [
+        "linked-list-inversion"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "reverse-nodes-in-k-group": {
+      "id": "reverse-nodes-in-k-group",
+      "kind": "leetcode",
+      "slug": "reverse-nodes-in-k-group",
+      "url": "https://leetcode.com/problems/reverse-nodes-in-k-group/",
+      "title": "Reverse Nodes in k-Group",
+      "diff": "H",
+      "conceptIds": [
+        "linked-list-inversion"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "partition-list": {
+      "id": "partition-list",
+      "kind": "leetcode",
+      "slug": "partition-list",
+      "url": "https://leetcode.com/problems/partition-list/",
+      "title": "Partition List",
+      "diff": "M",
+      "conceptIds": [
+        "linked-list-inversion"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "rotate-list": {
+      "id": "rotate-list",
+      "kind": "leetcode",
+      "slug": "rotate-list",
+      "url": "https://leetcode.com/problems/rotate-list/",
+      "title": "Rotate List",
+      "diff": "M",
+      "conceptIds": [
+        "linked-list-inversion"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "remove-duplicates-from-sorted-list-ii": {
+      "id": "remove-duplicates-from-sorted-list-ii",
+      "kind": "leetcode",
+      "slug": "remove-duplicates-from-sorted-list-ii",
+      "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/",
+      "title": "Remove Duplicates from Sorted List II",
+      "diff": "M",
+      "conceptIds": [
+        "linked-list-inversion"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "maximum-depth-of-binary-tree": {
+      "id": "maximum-depth-of-binary-tree",
+      "kind": "leetcode",
+      "slug": "maximum-depth-of-binary-tree",
+      "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+      "title": "Maximum Depth of Binary Tree",
+      "diff": "E",
+      "conceptIds": [
+        "binary-tree-divide-and-conquer"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "invert-binary-tree": {
+      "id": "invert-binary-tree",
+      "kind": "leetcode",
+      "slug": "invert-binary-tree",
+      "url": "https://leetcode.com/problems/invert-binary-tree/",
+      "title": "Invert Binary Tree",
+      "diff": "E",
+      "conceptIds": [
+        "binary-tree-divide-and-conquer"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "symmetric-tree": {
+      "id": "symmetric-tree",
+      "kind": "leetcode",
+      "slug": "symmetric-tree",
+      "url": "https://leetcode.com/problems/symmetric-tree/",
+      "title": "Symmetric Tree",
+      "diff": "E",
+      "conceptIds": [
+        "binary-tree-divide-and-conquer"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "same-tree": {
+      "id": "same-tree",
+      "kind": "leetcode",
+      "slug": "same-tree",
+      "url": "https://leetcode.com/problems/same-tree/",
+      "title": "Same Tree",
+      "diff": "E",
+      "conceptIds": [
+        "binary-tree-divide-and-conquer"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "path-sum": {
+      "id": "path-sum",
+      "kind": "leetcode",
+      "slug": "path-sum",
+      "url": "https://leetcode.com/problems/path-sum/",
+      "title": "Path Sum",
+      "diff": "E",
+      "conceptIds": [
+        "binary-tree-divide-and-conquer"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "sum-root-to-leaf-numbers": {
+      "id": "sum-root-to-leaf-numbers",
+      "kind": "leetcode",
+      "slug": "sum-root-to-leaf-numbers",
+      "url": "https://leetcode.com/problems/sum-root-to-leaf-numbers/",
+      "title": "Sum Root to Leaf Numbers",
+      "diff": "M",
+      "conceptIds": [
+        "binary-tree-divide-and-conquer"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "count-complete-tree-nodes": {
+      "id": "count-complete-tree-nodes",
+      "kind": "leetcode",
+      "slug": "count-complete-tree-nodes",
+      "url": "https://leetcode.com/problems/count-complete-tree-nodes/",
+      "title": "Count Complete Tree Nodes",
+      "diff": "E",
+      "conceptIds": [
+        "binary-tree-divide-and-conquer"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "flatten-binary-tree-to-linked-list": {
+      "id": "flatten-binary-tree-to-linked-list",
+      "kind": "leetcode",
+      "slug": "flatten-binary-tree-to-linked-list",
+      "url": "https://leetcode.com/problems/flatten-binary-tree-to-linked-list/",
+      "title": "Flatten Binary Tree to Linked List",
+      "diff": "M",
+      "conceptIds": [
+        "binary-tree-divide-and-conquer"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "binary-tree-level-order-traversal": {
+      "id": "binary-tree-level-order-traversal",
+      "kind": "leetcode",
+      "slug": "binary-tree-level-order-traversal",
+      "url": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+      "title": "Binary Tree Level Order Traversal",
+      "diff": "M",
+      "conceptIds": [
+        "tree-bfs-dijkstra-s"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "binary-tree-zigzag-level-order-traversal": {
+      "id": "binary-tree-zigzag-level-order-traversal",
+      "kind": "leetcode",
+      "slug": "binary-tree-zigzag-level-order-traversal",
+      "url": "https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/",
+      "title": "Binary Tree Zigzag Level Order Traversal",
+      "diff": "M",
+      "conceptIds": [
+        "tree-bfs-dijkstra-s"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "binary-tree-right-side-view": {
+      "id": "binary-tree-right-side-view",
+      "kind": "leetcode",
+      "slug": "binary-tree-right-side-view",
+      "url": "https://leetcode.com/problems/binary-tree-right-side-view/",
+      "title": "Binary Tree Right Side View",
+      "diff": "M",
+      "conceptIds": [
+        "tree-bfs-dijkstra-s"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "average-of-levels-in-binary-tree": {
+      "id": "average-of-levels-in-binary-tree",
+      "kind": "leetcode",
+      "slug": "average-of-levels-in-binary-tree",
+      "url": "https://leetcode.com/problems/average-of-levels-in-binary-tree/",
+      "title": "Average of Levels in Binary Tree",
+      "diff": "E",
+      "conceptIds": [
+        "tree-bfs-dijkstra-s"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "populating-next-right-pointers-in-each-node-ii": {
+      "id": "populating-next-right-pointers-in-each-node-ii",
+      "kind": "leetcode",
+      "slug": "populating-next-right-pointers-in-each-node-ii",
+      "url": "https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/",
+      "title": "Populating Next Right Pointers II",
+      "diff": "M",
+      "conceptIds": [
+        "tree-bfs-dijkstra-s"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "lru-cache": {
+      "id": "lru-cache",
+      "kind": "leetcode",
+      "slug": "lru-cache",
+      "url": "https://leetcode.com/problems/lru-cache/",
+      "title": "LRU Cache",
+      "diff": "M",
+      "conceptIds": [
+        "thread-safe-lru-lfu-cache"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "insert-delete-getrandom-o1": {
+      "id": "insert-delete-getrandom-o1",
+      "kind": "leetcode",
+      "slug": "insert-delete-getrandom-o1",
+      "url": "https://leetcode.com/problems/insert-delete-getrandom-o1/",
+      "title": "Insert Delete GetRandom O(1)",
+      "diff": "M",
+      "conceptIds": [
+        "thread-safe-lru-lfu-cache"
+      ],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "text-justification": {
+      "id": "text-justification",
+      "kind": "leetcode",
+      "slug": "text-justification",
+      "url": "https://leetcode.com/problems/text-justification/",
+      "title": "Text Justification",
+      "diff": "H",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "max-points-on-a-line": {
+      "id": "max-points-on-a-line",
+      "kind": "leetcode",
+      "slug": "max-points-on-a-line",
+      "url": "https://leetcode.com/problems/max-points-on-a-line/",
+      "title": "Max Points on a Line",
+      "diff": "H",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "remove-element": {
+      "id": "remove-element",
+      "kind": "leetcode",
+      "slug": "remove-element",
+      "url": "https://leetcode.com/problems/remove-element/",
+      "title": "Remove Element",
+      "diff": "E",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "remove-duplicates-from-sorted-array": {
+      "id": "remove-duplicates-from-sorted-array",
+      "kind": "leetcode",
+      "slug": "remove-duplicates-from-sorted-array",
+      "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/",
+      "title": "Remove Duplicates from Sorted Array",
+      "diff": "E",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "rotate-array": {
+      "id": "rotate-array",
+      "kind": "leetcode",
+      "slug": "rotate-array",
+      "url": "https://leetcode.com/problems/rotate-array/",
+      "title": "Rotate Array",
+      "diff": "M",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "two-sum": {
+      "id": "two-sum",
+      "kind": "leetcode",
+      "slug": "two-sum",
+      "url": "https://leetcode.com/problems/two-sum/",
+      "title": "Two Sum",
+      "diff": "E",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "valid-anagram": {
+      "id": "valid-anagram",
+      "kind": "leetcode",
+      "slug": "valid-anagram",
+      "url": "https://leetcode.com/problems/valid-anagram/",
+      "title": "Valid Anagram",
+      "diff": "E",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "group-anagrams": {
+      "id": "group-anagrams",
+      "kind": "leetcode",
+      "slug": "group-anagrams",
+      "url": "https://leetcode.com/problems/group-anagrams/",
+      "title": "Group Anagrams",
+      "diff": "M",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "ransom-note": {
+      "id": "ransom-note",
+      "kind": "leetcode",
+      "slug": "ransom-note",
+      "url": "https://leetcode.com/problems/ransom-note/",
+      "title": "Ransom Note",
+      "diff": "E",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "isomorphic-strings": {
+      "id": "isomorphic-strings",
+      "kind": "leetcode",
+      "slug": "isomorphic-strings",
+      "url": "https://leetcode.com/problems/isomorphic-strings/",
+      "title": "Isomorphic Strings",
+      "diff": "E",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "word-pattern": {
+      "id": "word-pattern",
+      "kind": "leetcode",
+      "slug": "word-pattern",
+      "url": "https://leetcode.com/problems/word-pattern/",
+      "title": "Word Pattern",
+      "diff": "E",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "roman-to-integer": {
+      "id": "roman-to-integer",
+      "kind": "leetcode",
+      "slug": "roman-to-integer",
+      "url": "https://leetcode.com/problems/roman-to-integer/",
+      "title": "Roman to Integer",
+      "diff": "E",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "integer-to-roman": {
+      "id": "integer-to-roman",
+      "kind": "leetcode",
+      "slug": "integer-to-roman",
+      "url": "https://leetcode.com/problems/integer-to-roman/",
+      "title": "Integer to Roman",
+      "diff": "M",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "length-of-last-word": {
+      "id": "length-of-last-word",
+      "kind": "leetcode",
+      "slug": "length-of-last-word",
+      "url": "https://leetcode.com/problems/length-of-last-word/",
+      "title": "Length of Last Word",
+      "diff": "E",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "reverse-words-in-a-string": {
+      "id": "reverse-words-in-a-string",
+      "kind": "leetcode",
+      "slug": "reverse-words-in-a-string",
+      "url": "https://leetcode.com/problems/reverse-words-in-a-string/",
+      "title": "Reverse Words in a String",
+      "diff": "M",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "zigzag-conversion": {
+      "id": "zigzag-conversion",
+      "kind": "leetcode",
+      "slug": "zigzag-conversion",
+      "url": "https://leetcode.com/problems/zigzag-conversion/",
+      "title": "Zigzag Conversion",
+      "diff": "M",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "find-the-index-of-the-first-occurrence-in-a-string": {
+      "id": "find-the-index-of-the-first-occurrence-in-a-string",
+      "kind": "leetcode",
+      "slug": "find-the-index-of-the-first-occurrence-in-a-string",
+      "url": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/",
+      "title": "First Occurrence in a String",
+      "diff": "E",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "palindrome-number": {
+      "id": "palindrome-number",
+      "kind": "leetcode",
+      "slug": "palindrome-number",
+      "url": "https://leetcode.com/problems/palindrome-number/",
+      "title": "Palindrome Number",
+      "diff": "E",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "plus-one": {
+      "id": "plus-one",
+      "kind": "leetcode",
+      "slug": "plus-one",
+      "url": "https://leetcode.com/problems/plus-one/",
+      "title": "Plus One",
+      "diff": "E",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    },
+    "factorial-trailing-zeroes": {
+      "id": "factorial-trailing-zeroes",
+      "kind": "leetcode",
+      "slug": "factorial-trailing-zeroes",
+      "url": "https://leetcode.com/problems/factorial-trailing-zeroes/",
+      "title": "Factorial Trailing Zeroes",
+      "diff": "M",
+      "conceptIds": [],
+      "source": "builtin",
+      "addedAt": null,
+      "verification": {
+        "status": "builtin"
+      }
+    }
+  }
+}

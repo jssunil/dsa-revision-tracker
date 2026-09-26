@@ -1,5 +1,9 @@
 {
   "updatedAt": null,
   "days": {},
-  "problems": {}
+  "problems": {},
+  "revisions": {},
+  "srs": {},
+  "concepts": {},
+  "schemaVersion": 2
 }
